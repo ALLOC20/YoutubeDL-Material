@@ -43,7 +43,5 @@ RUN npm install && chown -R $UID:$GID ./
 COPY --chown=$UID:$GID --from=frontend [ "/build/backend/public/", "/app/public/" ]
 COPY --chown=$UID:$GID [ "/backend/", "/app/" ]
 
-RUN chmod +x /app/backend/setdefault.sh
-CMD /app/backend/setdefault.sh
 ENTRYPOINT [ "/app/backend/entrypoint.sh" ]
 CMD [ "forever", "app.js" ]
