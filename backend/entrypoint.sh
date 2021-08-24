@@ -1,6 +1,6 @@
 #!/bin/sh
 DIR_DEFAULT="/backend/appdata"
-cat << EOF ${DIR_DEFAULT}/appdata.json
+cat << EOF ${DIR_DEFAULT}/default.json
 {
   "YoutubeDLMaterial": {
     "Host": {
